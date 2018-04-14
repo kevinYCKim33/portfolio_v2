@@ -15,6 +15,7 @@ $(document).ready(function(){
   });
 
 // https://owlcarousel2.github.io/OwlCarousel2/demos/basic.html
+// if width is 480px, then show 2 items
   $('.owl-carousel').owlCarousel({
     loop:true,
     items: 4,

@@ -81,8 +81,39 @@ body {
   max-width: 100%;
 }
 
+/* color from flatuicolors.com */
 .skillsSection {
-  /* color from flatuicolors.com */
   background-color: #e74c3c; /* a rosy red */
   color: #fff;
+}
+
+.skill {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.chart {
+  position: relative;
+  width: 152px;
+  height: 152px;
+  display: inline-block;
+  text-align: center;
+}
+
+.chart canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.chart .percent {
+  color: #000;
+  line-height: 157px;
+  display: inline-block;
+  font-size: 35px;
+}
+
+/* add a percent symbol after the number  */
+.chart .percent:after {
+  content: '%';
 }
