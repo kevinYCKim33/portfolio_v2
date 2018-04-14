@@ -9,6 +9,11 @@
   /* black with 0.4 opacity */
 }
 
+/* makes the arrow keys stay on top */
+.slides-navigation {
+  z-index: 6;
+}
+
 /* arrow keys for main slides */
 .slides-navigation .prev,
 .slides-navigation .next {
@@ -26,4 +31,33 @@
 .slides-navigation a.next {
   right: 20px;
   background-image: url(../img/icons/next.png);
+}
+
+/* Kevin Kim and Position */
+.titleMessage {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 50%;
+  z-index: 5;
+  text-align: center;
+  margin-top: -125px;
+}
+
+/* My name */
+.titleMessage .heading p {
+  color: #FFF;
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+  font-weight: 100;
+  letter-spacing: 7px;
+}
+
+/* My name */
+.titleMessage .heading .main {
+  font-size: 50px;
+}
+
+/* My title */
+.titleMessage .heading .sub {
+  font-size: 23px;
 }
