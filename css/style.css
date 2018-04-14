@@ -1,3 +1,11 @@
+body {
+  margin: 0px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  letter-spacing: 1px;
+}
+
 /* adding black opacity to background */
 .overlay {
   width: 100%;
@@ -71,4 +79,10 @@
 /* in this case col-md-5 */
 .aboutImage {
   max-width: 100%;
+}
+
+.skillsSection {
+  /* color from flatuicolors.com */
+  background-color: #e74c3c;
+  color: #fff;
 }
