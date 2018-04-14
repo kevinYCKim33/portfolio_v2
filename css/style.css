@@ -67,6 +67,8 @@
   padding: 100px 0;
 }
 
+/* makes my headshot as big as the container that it's in */
+/* in this case col-md-5 */
 .aboutImage {
   max-width: 100%;
 }
