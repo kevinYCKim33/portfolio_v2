@@ -33,7 +33,7 @@
   background-image: url(../img/icons/next.png);
 }
 
-/* Kevin Kim and Position */
+/* Kevin Kim and Title */
 .titleMessage {
   position: absolute;
   width: 100%;
@@ -60,4 +60,13 @@
 /* My title */
 .titleMessage .heading .sub {
   font-size: 23px;
+}
+
+/* pads the bottom below the picture */
+.section {
+  padding: 100px 0;
+}
+
+.aboutImage {
+  max-width: 100%;
 }
