@@ -378,3 +378,21 @@ body {
   position: fixed;
   top: 0;
 }
+
+/* have loading icon cover up everything */
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+.loader .inner {
+  width: 100%;
+  height: 100%;
+  /* center the image and don't tile it up */
+  background: url(../img/loader.gif) center center no-repeat;
+}
