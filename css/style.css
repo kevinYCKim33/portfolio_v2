@@ -82,7 +82,8 @@ body {
 }
 
 /* color from flatuicolors.com */
-.skillsSection {
+.skillsSection,
+.contactSection {
   background-color: #e74c3c; /* a rosy red */
   color: #fff;
 }
