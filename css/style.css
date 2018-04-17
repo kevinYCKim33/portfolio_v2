@@ -235,6 +235,13 @@ body {
 
 .items li img {
   width: 100%;
+  /* make the images zoom in slowly on transition */
+  -webkit-transition: all 0.2s linear, 1s;
+  -moz-transition: all 0.2s linear, 1s;
+  -o-transition: all 0.2s linear, 1s;
+  -ms-transition: all 0.2s linear, 1s;
+  -moz-transition: all 0.2s linear, 1s;
+  -transition: all 0.2s linear, 1s;
 }
 
 .items .item {
@@ -268,6 +275,7 @@ body {
   position: relative;
   display: inline-block;
 
+/* make it come from left and right at 0.2s */
   -webkit-transition: all 0.2s linear, 0.2s;
   -moz-transition: all 0.2s linear, 0.2s;
   -o-transition: all 0.2s linear, 0.2s;
@@ -314,4 +322,19 @@ body {
 
 .items .item:hover .projectLink {
   right: 0px;
+}
+
+/* pictures get zoomed in on hover */
+.items .item:hover img {
+  -webkit-transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  -o-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  -transition: scale(1.05, 1.05);
+}
+
+/* making four pics display on one row */
+.items {
+  padding: 0;
 }
