@@ -90,7 +90,7 @@ $(document).ready(function(){
     $("#filters .current").removeClass("current");
     $(this).addClass("current");
 
-    let selector = $(this).attr("data-filter");
+    var selector = $(this).attr("data-filter");
 
     $(".items").isotope({
       filter: selector,
@@ -103,6 +103,22 @@ $(document).ready(function(){
 
     return false;
 
-  })
+  });
+
+  const nav = $("#navigation");
+  const navTop = nav.offset().top; //moment at which to add or remove the sticky class;
+
+  $(window).on("scroll", stickyNavigation);
+
+  function stickyNavigation() {
+    var body = $("body");
+
+    if($(window).scrollTop() >= navTop) {
+      body.addClass("fixedNav");
+    }
+    else {
+      body.removeClass("fixedNav");
+    }
+  }
 
 });
