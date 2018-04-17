@@ -105,6 +105,7 @@ $(document).ready(function(){
 
   });
 
+  // code that scrolls down to the clicked link instead of jumping to it
   $("#navigation li a").click(function(e) {
     e.preventDefault();
     var targetElement = $(this).attr("href");
