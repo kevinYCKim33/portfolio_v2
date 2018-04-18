@@ -4,7 +4,7 @@ $(window).on("load", function() {
     $(".loader").fadeOut(750);
   });
 
-  //fixes mobile issues
+  //fixes mobile issues in charge of zoom effect on portfolio items
   $(".items").isotope({
     filter: '*',
     animationOptions: {
@@ -102,6 +102,7 @@ $(document).ready(function(){
 
     var selector = $(this).attr("data-filter");
 
+    //
     $(".items").isotope({
       filter: selector,
       animationOptions: {
