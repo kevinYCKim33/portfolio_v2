@@ -396,3 +396,31 @@ body {
   /* center the image and don't tile it up */
   background: url(../img/loader.gif) center center no-repeat;
 }
+
+/* languages frontend backend */
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.stack-title {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.icon-background2 {
+  color: white;
+}
+
+.skills-icon {
+  color: #e74c3c;
+}
+
+/* highlighting languages here */
+.highlight {
+  font-weight: bold;
+  font-style: italic;
+  color: #fff000;
+}

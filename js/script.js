@@ -4,7 +4,7 @@ $(window).on("load", function() {
     $(".loader").fadeOut(750);
   });
 
-  //move it here
+  //fixes mobile issues
   $(".items").isotope({
     filter: '*',
     animationOptions: {
