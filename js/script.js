@@ -36,10 +36,10 @@ $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
     loop:true,
     items: 1,
-    dots: true,
-    autoplay:true,
-    autoplayTimeout:3000,
-    autoplayHoverPause: true, // Stops autoplay
+    dots: true
+    // autoplay:true,
+    // autoplayTimeout:3000,
+    // autoplayHoverPause: true, // Stops autoplay
     // responsive:{
     //     0:{
     //         items:1
