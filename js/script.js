@@ -35,22 +35,41 @@ $(document).ready(function(){
 // if width is 480px, then show 2 items
   $('.owl-carousel').owlCarousel({
     loop:true,
-    items: 4,
-    responsive:{
-        0:{
-            items:1
-        },
-        480:{
-            items:2
-        },
-        768:{
-            items:3
-        },
-        938:{
-            items:4
-        }
-    }
+    items: 1,
+    dots: true,
+    // responsive:{
+    //     0:{
+    //         items:1
+    //     },
+    //     480:{
+    //         items:2
+    //     },
+    //     768:{
+    //         items:3
+    //     },
+    //     938:{
+    //         items:4
+    //     }
+    // }
   });
+
+  // $('#owl-one').owlCarousel({
+  //   loop:true,
+  //   margin:10,
+  //   nav:true,
+  //   items: 1,
+  //   responsive:{
+  //       0:{
+  //           items:1
+  //       },
+  //       600:{
+  //           items:3
+  //       },
+  //       1000:{
+  //           items:5
+  //       }
+  //   }
+  // })
 
 
 

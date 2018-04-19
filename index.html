@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/superslides.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -155,14 +157,27 @@
         </div>
 
         <div class="row" style="border: 2px solid red">
-          <div class="item col-md-4" >
-            <img style="width:100%; border: 2px solid gray;" src="img/portfolio/vendough_main.png" alt="vendough-pic">
+          <div class="col-md-4" >
+            <div class="owl-carousel owl-theme">
+              <div class="item" style="background-color:pink"><img style="width:100%; border: 2px solid gray;" src="img/portfolio/vendough_main.png" alt="vendough-pic"></div>
+              <div class="item" style="background-color:pink"><h4>2</h4></div>
+              <div class="item"><h4>3</h4></div>
+              <div class="item"><h4>4</h4></div>
+              <div class="item"><h4>5</h4></div>
+              <div class="item"><h4>6</h4></div>
+              <div class="item"><h4>7</h4></div>
+              <div class="item"><h4>8</h4></div>
+              <div class="item"><h4>9</h4></div>
+              <div class="item"><h4>10</h4></div>
+              <div class="item"><h4>11</h4></div>
+              <div class="item"><h4>12</h4></div>
+            </div>
           </div>
           <div class="derp col-md-8">
             <h4>Vendough <small>-a faithful adaptation of Venmo</small></h4>
             <p>Ruby on Rails, jQuery, Handlebars, CSS, Bootstrap, ActiveRecord, PostgreSQL, Devise, Omniauth</p>
             <p>Aside from the fact that users exchange fictional currency with each other, Vendough emulates almost every single facet of Venmo-- the popular payment service app owned by PayPal. </p>
-            <p>Users can register/sign in with their Facebook account via Omniauth, request or send payments with other users, and like and comment on completed transactions.</p>
+            <p>Users can register/sign in with their Facebook account via Devise with Omniauth, request or send payments with other users, and like and comment on completed transactions.</p>
             <p>Vendough also takes special care in protecting its users' privacy and security. Users are only able to see the payment amount in transactions that only directly involve them, and several ActiveRecord validation methods are implemented to prevent fraudulent transactions.</p>
             <p>See the source code here or demo the live app here.</p>
           </div>
