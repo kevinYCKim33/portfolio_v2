@@ -302,6 +302,10 @@ body {
 
 }
 
+.item:hover .imageOverlay {
+  opacity: 1;
+}
+
 .items .item:hover .imageOverlay {
   opacity: 1;
 }

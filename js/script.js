@@ -113,7 +113,12 @@ $(document).ready(function(){
 
   });
 
-  $("[data-fancybox]").fancybox();
+  $('[data-fancybox]').fancybox({
+    transitionIn : 'fade',
+    transitionOut: 'fade',
+    // cyclic: true
+  })
+
 
 
 
