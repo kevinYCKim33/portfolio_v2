@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #333;
   background-color: #fff;
@@ -414,12 +415,12 @@ body {
   padding: 10px;
 }
 
-.icon-background2 {
-  color: white;
-}
-
 .skills-icon {
   color: #e74c3c;
+}
+
+.skills-icon-background {
+  color: white;
 }
 
 /* highlighting languages here */
@@ -428,3 +429,30 @@ body {
   font-style: italic;
   color: #fff000;
 }
+
+/* github and heroku link styling */
+.proj-line {
+  display: flex;
+}
+
+.proj-links {
+  position: relative;
+  bottom: 5px;
+  padding-left: 15px;
+  font-size: 2.0em;
+}
+
+.proj-line a {
+  color:inherit;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.proj-line i:hover {
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+/* .heroku-background1 {
+  color: #ffc0ff;
+} */
