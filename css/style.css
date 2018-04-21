@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: #333;
   background-color: #fff;
@@ -430,6 +430,18 @@ body {
   color: #fff000;
 }
 
+/* thumbnail border */
+.owl-carousel .owl-item img {
+  width: 99%;
+  /* 99% to leave room for nice shadow touch */
+}
+
+.item img {
+  /* border: 1px solid gray; */
+  box-shadow: 2px 2px 4px gray;
+}
+
+
 /* github and heroku link styling */
 .proj-line {
   display: flex;
@@ -453,6 +465,18 @@ body {
   cursor: pointer;
 }
 
-/* .heroku-background1 {
-  color: #ffc0ff;
-} */
+.tech-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.tech-list li {
+  padding: 4px;
+  border: 1px solid #e74c3c;;
+  margin: 2px;
+  background-color: #e74c3c;;
+  color: white;
+  font-size: 12px;
+}
