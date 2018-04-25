@@ -356,10 +356,16 @@ body {
 }
 
 #navigation {
-  background-color: #e74c3c;
+  background-color: #c0392b;
   padding: 20px 10px;
   z-index: 100;
   width: 100%;
+  font-family: Montserrat; serif;
+}
+
+.menu-logo {
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
 #navigation li {
@@ -373,6 +379,11 @@ body {
 .navbar-brand,
 .navbar-brand:hover {
   color: #fff;
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  letter-spacing: 0.07em;
+  padding: 0 0 0 0;
+  margin: 0 16 0 0;
 }
 
 .navbar-toggler-icon {
