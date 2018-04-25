@@ -74,13 +74,52 @@ body {
 
 /* pads the bottom below the picture */
 .section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
+
+#about {
+  background-color: rgb(255,245,245);
+  font-family: 'Libre Baskerville', serif;
+}
+
+#about a {
+  color: #e74c3c;;
+  text-decoration: none; /* no underline */
+}
+
+#about h5 {
+  font-size: 1.0rem;
+  font-family: 'Montserrat', sans-serif;
+  color:#e74c3c;
+}
+
+#about .col-md-4 {
+  padding-bottom: 20px;
+}
+
+/* #about h4 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+#about p {
+  font-family:
+} */
+
+/* 'Libre Baskerville', serif; */
+/* #about h3 {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.6rem;
+  color: #4C2405;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  margin: 0 0 0 .3rem;
+} */
 
 /* makes my headshot as big as the container that it's in */
 /* in this case col-md-5 */
 .aboutImage {
   max-width: 100%;
+  border-radius: 50%;
 }
 
 /* color from flatuicolors.com */
