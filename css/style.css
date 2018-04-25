@@ -4,7 +4,7 @@ body {
   font-size: 14px;
   color: #333;
   background-color: #fff;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 /* adding black opacity to background */
@@ -56,9 +56,10 @@ body {
 /* My name */
 .titleMessage .heading p {
   color: #FFF;
+  font-family: 'Libre Baskerville', sans-serif;
   text-shadow: 0px 2px 5px rgba(0,0,0,0.4);
   font-weight: 100;
-  letter-spacing: 7px;
+  /* letter-spacing: 7px; */
 }
 
 /* My name */
