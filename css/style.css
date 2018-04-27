@@ -552,12 +552,18 @@ p {
 /* github and heroku link styling */
 .proj-line {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.proj-line h4 {
+  margin-bottom: 0px;
 }
 
 .proj-links {
-  position: relative;
-  bottom: 4px;
-  padding-left: 15px;
+  /* position: relative;
+  bottom: 4px; */
+  padding-left: 2px;
   font-size: 1.75em;
 }
 
