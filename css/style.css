@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Libre Baskerville', sans-serif;
   font-size: 14px;
   color: #333;
   background-color: #fff;
@@ -79,12 +79,14 @@ body {
 
 #about {
   background-color: rgb(255,245,245);
-  font-family: 'Libre Baskerville', serif;
 }
 
 #about a {
   color: #e74c3c;;
   text-decoration: none; /* no underline */
+}
+#email-button > a {
+  color: inherit;
 }
 
 #about h5 {
@@ -97,23 +99,40 @@ body {
   padding-bottom: 20px;
 }
 
-/* #about h4 {
-  font-family: 'Libre Baskerville', serif;
+#resume-email {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#about p {
-  font-family:
-} */
+#resume-email li {
+  margin: 3px 5px 3px 0px;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
 
-/* 'Libre Baskerville', serif; */
-/* #about h3 {
-  font-family: "montserrat", sans-serif;
-  font-size: 1.6rem;
-  color: #4C2405;
-  text-transform: uppercase;
-  letter-spacing: .15rem;
-  margin: 0 0 0 .3rem;
-} */
+#resume-email li:hover {
+  background-color: #96392b;
+  border: 1px solid #96392b;
+}
+
+#email-button {
+  background-color: #c0392b;
+  border: 1px solid #c0392b;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#resume-button {
+  border: 1px solid #e74c3c;
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 14.7px;
+}
 
 /* makes my headshot as big as the container that it's in */
 /* in this case col-md-5 */
