@@ -1,10 +1,13 @@
 body {
   margin: 0px;
-  font-family: 'Libre Baskerville', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: #333;
   background-color: #fff;
-  /* letter-spacing: 1px; */
+}
+
+p {
+  font-family: 'Libre Baskerville', sans-serif;
 }
 
 /* adding black opacity to background */
@@ -91,8 +94,11 @@ body {
 
 #about h5 {
   font-size: 1.0rem;
-  font-family: 'Montserrat', sans-serif;
   color:#e74c3c;
+}
+
+#about h4 {
+  font-family: 'Libre Baskerville', sans-serif;
 }
 
 #about .col-md-4 {
@@ -134,6 +140,21 @@ body {
   padding: 8px 14.7px;
 }
 
+#portfolio h2 {
+  color: #e74c3c;
+}
+
+/* putting subtle red line above the portfolio title */
+/* https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
+#portfolio h2:before {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  margin: 0 auto; /* This will center the border. */
+  width: 14%; /* Change this to whatever width you want. */
+  padding-bottom: 15px; /* This creates some space between the element and the border. */
+  border-top: 1px red solid; /* This creates the border. Replace black with whatever color
+}
+
 /* makes my headshot as big as the container that it's in */
 /* in this case col-md-5 */
 .aboutImage {
@@ -146,6 +167,7 @@ body {
 .contactSection {
   background-color: #e74c3c; /* a rosy red */
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .skill {
