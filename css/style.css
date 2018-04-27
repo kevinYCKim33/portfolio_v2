@@ -81,7 +81,7 @@ p {
 }
 
 #about {
-  background-color: rgb(255,245,245);
+  background-color: rgb(245,245,245);
 }
 
 #about a {
@@ -140,6 +140,10 @@ p {
   padding: 8px 14.7px;
 }
 
+#portfolio {
+  background-color: rgb(245,245,245);
+}
+
 #portfolio h2 {
   color: #e74c3c;
 }
@@ -152,7 +156,18 @@ p {
   margin: 0 auto; /* This will center the border. */
   width: 14%; /* Change this to whatever width you want. */
   padding-bottom: 15px; /* This creates some space between the element and the border. */
-  border-top: 1px red solid; /* This creates the border. Replace black with whatever color
+  border-top: 1px red solid;
+}
+
+#portfolio .addl-info {
+  display: flex;
+  justify-content: center;
+}
+
+#portfolio h6 {
+  width: 50%;
+  color: gray;
+  /* font-size: 12px; */
 }
 
 /* makes my headshot as big as the container that it's in */
@@ -541,9 +556,9 @@ p {
 
 .proj-links {
   position: relative;
-  bottom: 2px;
+  bottom: 4px;
   padding-left: 15px;
-  font-size: 2.0em;
+  font-size: 1.75em;
 }
 
 .proj-line a {
