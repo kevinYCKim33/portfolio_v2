@@ -481,6 +481,7 @@ p {
   margin: 0 16 0 0;
 }
 
+/* the burger icon */
 .navbar-toggler-icon {
   background: url(../img/icons/menu.png);
   background-size: 100%;

@@ -160,7 +160,7 @@ $(document).ready(function(){
     var body = $("body");
 
     if($(window).scrollTop() >= navTop) {
-      body.css("padding-top", nav.outerHeight() + "px")
+      body.css("padding-top", nav.outerHeight() - 3 + "px") //fix for content jumping on scroll lock trigger
       body.addClass("fixedNav");
     }
     else {
