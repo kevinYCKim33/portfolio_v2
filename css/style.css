@@ -442,14 +442,51 @@ p {
 }
 
 .copyrightSection {
-  background-color: #000;
+  background-color: #363b3f;;
   color: #fff;
-  padding: 30px 5px;
+  padding: 30px 50px;
 }
 
 .copyrightSection p {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
+
+.copyrightSection ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding-left: 0px;
+  margin-top: 10px;
+}
+
+.copyrightSection li {
+  margin: 0px 5px;
+  font-size: 30px;
+}
+
+.copyrightSection a {
+  color: #95a5a6;
+
+  text-decoration: none;
+}
+
+.copyrightSection a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #bdc3c7;
+}
+
+/* #contact a {
+  color: gold;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+} */
 
 #navigation {
   background-color: #c0392b;
@@ -601,7 +638,7 @@ p {
 }
 
 #contact {
-  padding: 165px;
+  padding: 130px;
 }
 
 #contact h2 {
