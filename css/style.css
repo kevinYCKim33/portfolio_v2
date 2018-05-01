@@ -277,7 +277,7 @@ p {
   color: #444;
 }
 
-.contactButton {
+/* .contactButton {
   color: #fff;
   padding: 15px 20px;
   display: inline-block;
@@ -290,7 +290,7 @@ p {
   text-decoration: none;
   color: #e74c3c;
   background-color: #fff;
-}
+} */
 
 .filter {
   text-align: center;
@@ -595,3 +595,49 @@ p {
   color: white;
   font-size: 12px;
 }
+
+.subHeading {
+  font-size: 1.0rem;
+}
+
+#contact {
+  padding: 165px;
+}
+
+#contact h2 {
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+#contact p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+#contact .emailSub {
+  margin-top: 50px;
+  font-size: 13px;
+}
+
+#contact a {
+  color: gold;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* .emailAddress {
+  color: gold;
+  text-decoration: none;
+}
+.emailAddress:hover {
+  color: rgb(245,245,220);
+  cursor: pointer;
+  text-decoration: none;
+} */
