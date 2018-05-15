@@ -442,7 +442,7 @@ p {
 }
 
 .copyrightSection {
-  background-color: #363b3f;;
+  background-color: #363b3f;
   color: #fff;
   padding: 30px 50px;
 }
@@ -477,16 +477,24 @@ p {
   color: #bdc3c7;
 }
 
-/* #contact a {
-  color: gold;
-  text-decoration: none;
+.fa-angellist {
+  background-color: #95a5a6;
+  color: #363b3f;
+  font-size: 20px;
+  padding-top: 4.83px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+  position: relative;
+  top: -3px;
 }
 
-#contact a:hover {
-  color: black;
+.fa-angellist:hover {
   cursor: pointer;
   text-decoration: none;
-} */
+  background-color: #bdc3c7;
+}
 
 #navigation {
   background-color: #c0392b;
@@ -668,13 +676,3 @@ p {
   cursor: pointer;
   text-decoration: none;
 }
-
-/* .emailAddress {
-  color: gold;
-  text-decoration: none;
-}
-.emailAddress:hover {
-  color: rgb(245,245,220);
-  cursor: pointer;
-  text-decoration: none;
-} */
