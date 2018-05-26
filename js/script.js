@@ -1,19 +1,9 @@
-// icon fades first, then the background
+// loader icon fades first, then the background
 $(window).on("load", function() {
   $(".loader .inner").fadeOut(500, function() {
     $(".loader").fadeOut(750);
   });
-
-  //fixes mobile issues in charge of zoom effect on portfolio items
-  $(".items").isotope({
-    filter: '*',
-    animationOptions: {
-      duration: 1500,
-      easing: 'linear',
-      queue: false
-    }
-  });
-})
+});
 
 // https://github.com/nicinabox/superslides
 $(document).ready(function(){
