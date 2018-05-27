@@ -10,6 +10,10 @@ p {
   font-family: 'Libre Baskerville', sans-serif;
 }
 
+/* -------------
+      LOADER
+---------------- */
+
 /* have loading icon cover up everything */
 .loader {
   width: 100%;
@@ -26,6 +30,10 @@ p {
   height: 100%;
   background: url(../img/loader.gif) center center no-repeat; /* center the image and don't tile it up */
 }
+
+/* -------------
+   TITLE SCREEN
+---------------- */
 
 .titleMessage {
   position: absolute;
@@ -60,6 +68,46 @@ p {
   background-color: rgba(0, 0, 0, 0.4); /* black with 0.4 opacity */
 }
 
+/* -------------
+      NAVBAR
+---------------- */
+
+#navigation {
+  background-color: #c0392b;
+  padding: 20px 10px;
+  z-index: 100;
+  width: 100%;
+}
+
+#navigation li {
+  padding: 0 10px;
+}
+
+#navigation li a {
+  color: #fff;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  letter-spacing: 0.07em;
+  padding: 0 0 0 0;
+  margin: 0 16px 0 0;
+}
+
+/* the burger icon */
+.navbar-toggler-icon {
+  background: url(../img/icons/menu.png);
+  background-size: 100%;
+}
+
+.fixedNav #navigation {
+  position: fixed;
+  top: 0;
+}
+
 .section {
   padding: 50px 0;
 }
@@ -67,6 +115,10 @@ p {
 #about, #portfolio {
   background-color: #f5f5f5;
 }
+
+/* -------------
+      ABOUT
+---------------- */
 
 .aboutImage {
   max-width: 100%; /* makes headshot as big as its container */
@@ -126,10 +178,56 @@ p {
   padding: 8px 14.7px;
 }
 
-#portfolio h2 {
+/* -------------
+      SKILLS
+---------------- */
+
+.skillsSection,
+.contactSection {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.section .heading {
+  text-align: center;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+/* languages/frontend/backend */
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.stack-title {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.skills-icon {
   color: #e74c3c;
 }
 
+.skills-icon-background {
+  color: white;
+}
+
+.highlight {
+  font-weight: bold;
+  font-style: italic;
+  color: #fff000;
+}
+
+/* -------------
+    PORTFOLIO
+---------------- */
+
+#portfolio h2 {
+  color: #e74c3c;
+}
 /* putting subtle red line above the portfolio title */
 /* https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
 #portfolio h2:before {
@@ -144,32 +242,108 @@ p {
 #portfolio .addl-info {
   display: flex;
   justify-content: center;
+  color: gray;
 }
 
 #portfolio h6 {
   width: 50%;
-  color: gray;
-  /* font-size: 12px; */
 }
 
-/* color from flatuicolors.com */
-.skillsSection,
-.contactSection {
-  background-color: #e74c3c; /* a rosy red */
-  color: #fff;
+/* thumbnail border */
+.owl-carousel .owl-item img {
+  width: 99%; /* 1% room for shadow touch */
+}
+
+.item img {
+  box-shadow: 2px 2px 4px gray;
+}
+
+/* github and heroku link styling */
+.proj-line {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.proj-line h4 {
+  margin-bottom: 0px;
+}
+
+.proj-links {
+  padding-left: 2px;
+  font-size: 1.75em;
+}
+
+.proj-line a {
+  color:inherit;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.proj-line i:hover {
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.tech-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.tech-list li {
+  padding: 4px;
+  background-color: #e74c3c;
+  border: 1px solid transparent;
+  margin: 2px;
+  color: white;
+  font-size: 12px;
+}
+
+/* --------------
+    CONTACTS
+----------------- */
+
+.subHeading {
+  font-size: 16px;
+}
+
+#contact {
+  padding: 130px 0px;
+}
+
+#contact h2 {
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+#contact p {
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 0.5rem;
 }
 
-.skill {
-  text-align: center;
-  margin-left: 10px;
+#contact .emailSub {
+  margin-top: 50px;
+  font-size: 13px;
 }
 
-.section .heading {
-  text-align: center;
-  padding-bottom: 40px;
-  width: 100%;
+#contact a {
+  color: gold;
+  text-decoration: none;
 }
+
+#contact a:hover {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ---------------------
+    FOOTER/COPYRIGHT
+---------------------- */
 
 .copyrightSection {
   background-color: #363b3f;
@@ -207,7 +381,6 @@ p {
   color: #bdc3c7;
 }
 
-/* unfortunately AngelList font-awesome does not come with square background */
 .fa-angellist {
   background-color: #95a5a6;
   color: #363b3f;
@@ -225,163 +398,4 @@ p {
   cursor: pointer;
   text-decoration: none;
   background-color: #bdc3c7;
-}
-
-#navigation {
-  background-color: #c0392b;
-  padding: 20px 10px;
-  z-index: 100;
-  width: 100%;
-}
-
-#navigation li {
-  padding: 0 10px;
-}
-
-#navigation li a {
-  color: #fff;
-}
-
-.navbar-brand,
-.navbar-brand:hover {
-  color: #fff;
-  font-family: 'Lobster', cursive;
-  font-size: 2em;
-  letter-spacing: 0.07em;
-  padding: 0 0 0 0;
-  margin: 0 16px 0 0;
-}
-
-/* the burger icon */
-.navbar-toggler-icon {
-  background: url(../img/icons/menu.png);
-  background-size: 100%;
-}
-
-.fixedNav #navigation {
-  position: fixed;
-  top: 0;
-}
-
-
-
-/* languages frontend backend */
-.stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 10px;
-}
-
-.stack-title {
-  font-size: 20px;
-  padding: 10px;
-}
-
-.skills-icon {
-  color: #e74c3c;
-}
-
-.skills-icon-background {
-  color: white;
-}
-
-/* highlighting languages here */
-.highlight {
-  font-weight: bold;
-  font-style: italic;
-  color: #fff000;
-}
-
-/* thumbnail border */
-.owl-carousel .owl-item img {
-  width: 99%;
-  /* 99% to leave room for nice shadow touch */
-}
-
-.item img {
-  /* border: 1px solid gray; */
-  box-shadow: 2px 2px 4px gray;
-}
-
-
-/* github and heroku link styling */
-.proj-line {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.proj-line h4 {
-  margin-bottom: 0px;
-}
-
-.proj-links {
-  /* position: relative;
-  bottom: 4px; */
-  padding-left: 2px;
-  font-size: 1.75em;
-}
-
-.proj-line a {
-  color:inherit;
-  text-decoration: none;
-  margin-right: 5px;
-}
-
-.proj-line i:hover {
-  color: #e74c3c;
-  cursor: pointer;
-}
-
-.tech-list {
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-}
-
-.tech-list li {
-  padding: 4px;
-  background-color: #e74c3c;
-  border: 1px solid transparent;
-  margin: 2px;
-  color: white;
-  font-size: 12px;
-}
-
-.subHeading {
-  font-size: 1.0rem;
-}
-
-#contact {
-  padding: 130px 0px;
-}
-
-#contact h2 {
-  margin-bottom: 25px;
-  margin-top: 15px;
-}
-
-#contact p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  color: white;
-  margin-bottom: 0.5rem;
-}
-
-#contact .emailSub {
-  margin-top: 50px;
-  font-size: 13px;
-}
-
-#contact a {
-  color: gold;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  color: black;
-  cursor: pointer;
-  text-decoration: none;
 }

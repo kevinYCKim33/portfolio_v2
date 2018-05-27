@@ -33,12 +33,9 @@ $(document).ready(function(){
     transitionOut: 'fade',
   });
 
-
   // code that scrolls down to the clicked link instead of jumping to it
   $("#navigation li a").click(function(e) {
     e.preventDefault();
-    // $(".nav-link").css("color", "white"); //doesn't work on section changes via scroll
-    // $(this).css("color","yellow");
     var targetElement = $(this).attr("href");
     var targetPosition = $(targetElement).offset().top;
     $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
@@ -46,7 +43,6 @@ $(document).ready(function(){
 
   const nav = $("#navigation");
   const navTop = nav.offset().top; //moment at which to add or remove the sticky class;
-  // const portfolioTop = $("#portfolio").offset().top
   $(window).on("scroll", stickyNavigation);
 
   function stickyNavigation() {
@@ -60,11 +56,5 @@ $(document).ready(function(){
       body.css("padding-top", 0);
       body.removeClass("fixedNav");
     }
-
-    // fiddle around with this after everything is done
-    // if ($(window).scrollTop() + 60 >= portfolioTop) {
-    //   $(".nav-link").css("color", "green"); //doesn't work on section changes via scroll
-    // }
   }
-
 });
