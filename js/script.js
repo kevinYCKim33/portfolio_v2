@@ -19,117 +19,20 @@ $(document).ready(function(){
   });
 
 // https://owlcarousel2.github.io/OwlCarousel2/demos/basic.html
-// if width is 480px, then show 2 items
   $('.owl-carousel').owlCarousel({
     loop:true,
     items: 1,
     dots: true,
     lazyLoad: true
-    // autoplay:true,
-    // autoplayTimeout:3000,
-    // autoplayHoverPause: true, // Stops autoplay
-    // responsive:{
-    //     0:{
-    //         items:1
-    //     },
-    //     480:{
-    //         items:2
-    //     },
-    //     768:{
-    //         items:3
-    //     },
-    //     938:{
-    //         items:4
-    //     }
-    // }
   });
-
-  // $('#owl-one').owlCarousel({
-  //   loop:true,
-  //   margin:10,
-  //   nav:true,
-  //   items: 1,
-  //   responsive:{
-  //       0:{
-  //           items:1
-  //       },
-  //       600:{
-  //           items:3
-  //       },
-  //       1000:{
-  //           items:5
-  //       }
-  //   }
-  // })
-
-
 
   var skillsTopOffset = $(".skillsSection").offset().top;
-  // var statsTopOffset = $(".statsSection").offset().top;
-  var countUpFinished = false;
-
-  $(window).scroll(function() {
-    // console.log(window.pageYOffset);
-    // make the numbers in pie chart rise up once you scroll down to it
-    // if(window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
-    //   $('.chart').easyPieChart({
-    //     easing: 'easeInOut',
-    //     barColor: '#fff',
-    //     trackColor: false,
-    //     scaleColor: false,
-    //     lineWidth: 4,
-    //     size: 152,
-    //     onStep: function(from, to, percent) {
-    //       $(this.el).find('.percent').text(Math.round(percent));
-    //     }
-    //   });
-    // }
-
-    // if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
-    //   $(".counter").each(function(){
-    //     let element= $(this);
-    //     let endVal = parseInt(element.text());
-    //
-    //     element.countup(endVal);
-    //   });
-    //   // scrolling magic to prevent the numbers from going down to 0 again.
-    //   countUpFinished = true;
-    // }
-
-
-
-
-  });
 
   $('[data-fancybox]').fancybox({
     transitionIn : 'fade',
     transitionOut: 'fade',
-    // cyclic: true
-  })
-
-
-
-
-  //filter function to sort out relevant portfolios
-  $("#filters a").click(function(){
-    $("#filters .current").removeClass("current");
-    $(this).addClass("current");
-
-    var selector = $(this).attr("data-filter");
-
-    //
-    $(".items").isotope({
-      filter: selector,
-      animationOptions: {
-        duration: 1500,
-        easing: 'linear',
-        queue: false
-      }
-    });
-
-    return false;
-
   });
+
 
   // code that scrolls down to the clicked link instead of jumping to it
   $("#navigation li a").click(function(e) {
