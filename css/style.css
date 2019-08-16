@@ -177,6 +177,17 @@ p {
   background-color: #96392b;
 }
 
+.external__link {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.external__link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #e74c3c;
+}
+
 #about h5 {
   font-size: 16px;
   color: #e74c3c;
@@ -231,7 +242,9 @@ p {
 
 .skillsSection,
 .contactSection {
-  background-color: #e74c3c;
+  /* background-color: #e74c3c; */
+  background-image: linear-gradient(to right bottom, rgba(222,53,46,0.8), rgba(176,37,33,0.8)),url(../img/red_background.jpg);
+  background-size: cover;
   color: #fff;
 }
 
@@ -362,6 +375,8 @@ a.highlight {
 
 #contact {
   padding: 150px 0px;
+  background-image: linear-gradient(to right bottom, rgba(222,53,46,0.8), rgba(176,37,33,0.8)),url(../img/red_background.jpg);
+  background-size: cover;
 }
 
 #contact h2 {
