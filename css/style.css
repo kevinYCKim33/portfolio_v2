@@ -46,13 +46,15 @@ p {
 }
 
 .titleMessage .heading p {
+  font-family: 'Montserrat', sans-serif;
   color: #fff;
   text-shadow: 0px 2px 5px rgba(0,0,0,0.4);
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .titleMessage .heading .main {
   font-size: 50px;
+  text-transform: uppercase;
 }
 
 .titleMessage .heading .sub {
@@ -125,9 +127,65 @@ p {
   border-radius: 50%;
 }
 
-#about a {
+.about-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 90px;
+}
+
+.about-container__image-container {
+  margin-right: 30px;
+  flex: 0 0 235px;
+}
+
+@media only screen and (max-width: 800px) {
+  .about-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .about-container__image-container {
+    align-self: center;
+    margin-right: 0;
+    margin-bottom: 30px;
+    width: 250px;
+  }
+
+  .about-container__info-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.about-container__email-link {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  transition: all .5s;
+}
+
+.about-container__email-link:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #96392b;
+}
+
+.external__link {
   color: #e74c3c;
   text-decoration: none;
+}
+
+.external__link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #e74c3c;
 }
 
 #about h5 {
@@ -167,7 +225,7 @@ p {
 }
 
 #email-button {
-  background-color: #c0392b;
+  background-color: #e74c3c;
   border: 1px solid transparent;
   padding: 8px;
 }
@@ -184,7 +242,9 @@ p {
 
 .skillsSection,
 .contactSection {
-  background-color: #e74c3c;
+  /* background-color: #e74c3c; */
+  background-image: linear-gradient(to right bottom, rgba(222,53,46,0.8), rgba(176,37,33,0.8)),url(../img/red_background.jpg);
+  background-size: cover;
   color: #fff;
 }
 
@@ -219,6 +279,10 @@ p {
   font-weight: bold;
   font-style: italic;
   color: #fff000;
+}
+
+a.highlight {
+  text-decoration: underline;
 }
 
 /* -------------
@@ -311,6 +375,8 @@ p {
 
 #contact {
   padding: 150px 0px;
+  background-image: linear-gradient(to right bottom, rgba(222,53,46,0.8), rgba(176,37,33,0.8)),url(../img/red_background.jpg);
+  background-size: cover;
 }
 
 #contact h2 {
