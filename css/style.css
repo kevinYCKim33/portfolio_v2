@@ -53,7 +53,7 @@ p {
 }
 
 .titleMessage .heading .main {
-  font-size: 50px;
+  font-size: 45px;
   text-transform: uppercase;
 }
 
@@ -310,7 +310,7 @@ a.highlight {
 }
 
 #portfolio h6 {
-  width: 50%;
+  width: 77%;
 }
 
 /* thumbnail border */
