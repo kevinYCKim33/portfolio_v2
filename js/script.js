@@ -1,9 +1,9 @@
 // loader icon fades first, then the background
-// $(window).on("load", function () {
-//   $(".loader .inner").fadeOut(500, function () {
-//     $(".loader").fadeOut(750);
-//   });
-// });
+$(window).on("load", function () {
+  $(".loader .inner").fadeOut(550, function () {
+    $(".loader").fadeOut(550);
+  });
+});
 
 // https://github.com/nicinabox/superslides
 $(document).ready(function () {
