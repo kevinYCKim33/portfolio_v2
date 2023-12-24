@@ -6,6 +6,13 @@ body {
   background-color: #fff;
 }
 
+#slides {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
 p {
   font-family: "Libre Baskerville", sans-serif;
 }

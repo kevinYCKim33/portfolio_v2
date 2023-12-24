@@ -1,22 +1,22 @@
 // loader icon fades first, then the background
-$(window).on("load", function () {
-  $(".loader .inner").fadeOut(550, function () {
-    $(".loader").fadeOut(550);
-  });
-});
+// $(window).on("load", function () {
+//   $(".loader .inner").fadeOut(550, function () {
+//     $(".loader").fadeOut(550);
+//   });
+// });
 
 // https://github.com/nicinabox/superslides
 $(document).ready(function () {
   $("#slides").superslides();
 
   // https://github.com/mattboldt/typed.js/
-  let typed = new Typed(".typed", {
-    strings: ["Front End Engineer"],
-    typeSpeed: 70,
-    // loop: true,
-    startDelay: 1000,
-    showCursor: false,
-  });
+  // let typed = new Typed(".typed", {
+  //   strings: ["Front End Engineer"],
+  //   typeSpeed: 70,
+  //   // loop: true,
+  //   startDelay: 1000,
+  //   showCursor: false,
+  // });
 
   // https://owlcarousel2.github.io/OwlCarousel2/demos/basic.html
   $(".owl-carousel").owlCarousel({
