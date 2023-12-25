@@ -355,8 +355,8 @@ a.highlight {
   flex-direction: column;
 }
 
-.proj-line h4 {
-  margin-bottom: 0px;
+.company-name {
+  margin-bottom: 10px;
 }
 
 .proj-links {
