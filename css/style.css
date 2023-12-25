@@ -189,7 +189,7 @@ p {
 
 .about-container__email-link {
   display: inline-block;
-  background: #e74c3c;
+  background: #c0392b;
   color: white;
   text-decoration: none;
   padding: 8px 10px;
@@ -206,19 +206,19 @@ p {
 }
 
 .external__link {
-  color: #e74c3c;
+  color: #c0392b;
   text-decoration: none;
 }
 
 .external__link:hover {
   cursor: pointer;
   text-decoration: none;
-  color: #e74c3c;
+  color: #c0392b;
 }
 
 #about h5 {
   font-size: 16px;
-  color: #e74c3c;
+  color: #c0392b;
 }
 
 #about h4 {
@@ -253,13 +253,13 @@ p {
 }
 
 #email-button {
-  background-color: #e74c3c;
+  background-color: #c0392b;
   border: 1px solid transparent;
   padding: 8px;
 }
 
 #resume-button {
-  background-color: #e74c3c;
+  background-color: #c0392b;
   border: 1px solid transparent;
   padding: 8px 14.7px;
 }
@@ -270,7 +270,7 @@ p {
 
 .skillsSection,
 .contactSection {
-  /* background-color: #e74c3c; */
+  /* background-color: #c0392b; */
   background-image: linear-gradient(
       to right bottom,
       rgba(222, 53, 46, 0.8),
@@ -301,7 +301,7 @@ p {
 }
 
 .skills-icon {
-  color: #e74c3c;
+  color: #c0392b;
 }
 
 .skills-icon-background {
@@ -323,7 +323,7 @@ a.highlight {
 ---------------- */
 
 #portfolio h2 {
-  color: #e74c3c;
+  color: #c0392b;
 }
 /* putting subtle red line above the portfolio title */
 /* https://www.steckinsights.com/shorten-length-border-bottom-pure-css/ */
@@ -339,7 +339,7 @@ a.highlight {
 #portfolio .addl-info {
   display: flex;
   justify-content: center;
-  color: gray;
+  color: black;
 }
 
 .addl-info__desc {
@@ -387,7 +387,7 @@ a.highlight {
 }
 
 .proj-line i:hover {
-  color: #e74c3c;
+  color: #c0392b;
   cursor: pointer;
 }
 
@@ -400,7 +400,7 @@ a.highlight {
 
 .tech-list li {
   padding: 4px;
-  background-color: #e74c3c;
+  background-color: #c0392b;
   border: 1px solid transparent;
   margin: 2px;
   color: white;
