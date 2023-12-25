@@ -342,10 +342,17 @@ a.highlight {
   color: gray;
 }
 
-#portfolio p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  /* width: 77%; */
+.addl-info__desc {
+  font-size: 1rem;
+}
+
+#portfolio h6 {
+  width: 77%;
+  font-size: 1.5rem;
+}
+
+.company-name {
+  font-size: 1.5rem;
 }
 
 /* thumbnail border */
