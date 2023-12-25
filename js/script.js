@@ -7,7 +7,7 @@
 
 // https://github.com/nicinabox/superslides
 $(document).ready(function () {
-  $("#slides").superslides();
+  // $("#slides").superslides();
 
   // https://github.com/mattboldt/typed.js/
   // let typed = new Typed(".typed", {
