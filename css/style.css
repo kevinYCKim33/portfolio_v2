@@ -180,13 +180,6 @@ p {
   }
 }
 
-/* hide carousel dots for a11y reasons on mobile */
-@media only screen and (max-width: 767px) {
-  .owl-dots {
-    display: none;
-  }
-}
-
 .about-container__email-link {
   display: inline-block;
   background: #c0392b;
