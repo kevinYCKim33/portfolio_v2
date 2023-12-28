@@ -161,6 +161,11 @@ p {
   flex: 0 0 235px;
 }
 
+.about-container__image-loader {
+  border-radius: 50%;
+  background-color: rgb(213, 195, 168);
+}
+
 @media only screen and (max-width: 800px) {
   .about-container {
     flex-direction: column;
