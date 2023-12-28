@@ -359,7 +359,20 @@ a.highlight {
   width: 99%; /* 1% room for shadow touch */
 }
 
+.item {
+  min-height: 200px;
+  background: url(../img/loader_transparent.gif) center center no-repeat; /* center the image and don't tile it up */
+}
+
+.item__arthur {
+  min-height: 300px;
+  background: url(../img/loader_transparent.gif) center center no-repeat; /* center the image and don't tile it up */
+}
+
 .item img {
+  background-color: #c3cbdc;
+  background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+
   box-shadow: 2px 2px 4px gray;
 }
 
