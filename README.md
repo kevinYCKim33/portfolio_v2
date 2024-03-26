@@ -4,7 +4,7 @@ This repo contains the source code for my portfolio site.
 
 I built it using simple HTML, CSS, Bootstrap, and jQuery.
 
-Check out the portfolio site [here](https://kevinyckim.netlify.com/).
+Check out the portfolio site [here](https://kevinyckim.com/).
 
 ![Portfolio1](kevink1.png)
 ![Portfolio2](kevink2.png)
