@@ -152,98 +152,133 @@
     </div>
     <!-- about -->
 
+    <!-- skills -->
     <div id="skills" class="skillsSection section">
       <div class="container">
-        <div class="row" style="padding-bottom: 20px">
-          <div class="col-md-12 text-center">
-            <h2>TECHNICAL SKILLS</h2>
-          </div>
+        <div class="col-md-12 text-center mb-4">
+          <h2>TECHNICAL SKILLS</h2>
         </div>
-        <div class="row">
-          <div class="col-sm text-center">
-            <div class="stack">
-              <div>
-                <span class="fa-stack fa-2x">
-                  <i
-                    class="fa fa-circle fa-stack-2x skills-icon-background"
-                  ></i>
-                  <!-- <i class="fa fa-code fa-stack-1x skills-icon"></i> -->
-                  <i class="fab fa-js-square fa-stack-1x skills-icon"></i>
-                </span>
+
+        <div class="row skills-grid">
+          <!-- Frontend -->
+          <div class="col-md-6">
+            <div class="skill-card">
+              <div class="skill-card-header">
+                <div class="skill-icon-wrapper">
+                  <i class="fas fa-code skills-card-icon"></i>
+                </div>
+
+                <div>
+                  <h3>FRONTEND</h3>
+                  <p>
+                    Building responsive, accessible, and performant user
+                    interfaces.
+                  </p>
+                </div>
               </div>
-              <div class="stack-title">JAVASCRIPT</div>
-              <div>
-                I have coded extensively in
-                <span class="highlight">JavaScript</span>,
-                <span class="highlight">TypeScript</span>,
-                <span class="highlight">React</span>,
-                <span class="highlight">React Native</span>,
-                <span class="highlight">Redux</span>, and
-                <span class="highlight">Apollo Client</span>. I like writing
-                meaningful tests with <span class="highlight">Jest</span>,
-                <span class="highlight">React Testing Library</span>, and
-                <span class="highlight">Cypress</span>. I have read all six
-                volumes of
-                <a
-                  href="https://github.com/getify/You-Dont-Know-JS"
-                  target="_blank"
-                  class="highlight"
-                  >Kyle Simpson's YDKJS series</a
-                >
-                and now eagerly wait for someone to ask me what closure is
-                someday.
-              </div>
+
+              <!-- <div class="skill-card-divider"></div> -->
+
+              <ul class="skill-tags">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Redux Toolkit</li>
+                <li>Tailwind CSS</li>
+              </ul>
             </div>
           </div>
-          <div class="col-sm text-center">
-            <div class="stack">
-              <div>
-                <span class="fa-stack fa-2x">
-                  <i
-                    class="fa fa-circle fa-stack-2x skills-icon-background"
-                  ></i>
-                  <i class="fab fa-css3-alt fa-stack-1x skills-icon"></i>
-                  <!-- <i class="fab fa-css3-alt"></i> -->
-                </span>
+
+          <!-- Backend -->
+          <div class="col-md-6">
+            <div class="skill-card">
+              <div class="skill-card-header">
+                <div class="skill-icon-wrapper">
+                  <i class="fas fa-server skills-card-icon"></i>
+                </div>
+
+                <div>
+                  <h3>BACKEND</h3>
+                  <p class="resp-point">
+                    Designing APIs and building robust server-side applications.
+                  </p>
+                </div>
               </div>
-              <div class="stack-title">CSS</div>
-              <div>
-                I thoroughly enjoy bringing wireframes and prototypes to life
-                using <span class="highlight">CSS3</span>. I put great
-                importance on keeping CSS codebase scaleable by utilizing
-                combinations of <span class="highlight">SASS/SCSS</span>,
-                <span class="highlight">Styled Components</span>, and
-                <span class="highlight">BEM</span>.
-              </div>
+
+              <!-- <div class="skill-card-divider"></div> -->
+
+              <ul class="skill-tags">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Node.js</li>
+                <li>Ruby on Rails</li>
+                <li>GraphQL</li>
+                <li>REST APIs</li>
+              </ul>
             </div>
           </div>
-          <div class="col-sm text-center">
-            <div class="stack">
-              <div>
-                <span class="fa-stack fa-2x">
-                  <i
-                    class="fa fa-circle fa-stack-2x skills-icon-background"
-                  ></i>
-                  <i class="fa fa-database fa-stack-1x skills-icon"></i>
-                </span>
+
+          <!-- Infrastructure -->
+          <div class="col-md-6">
+            <div class="skill-card">
+              <div class="skill-card-header">
+                <div class="skill-icon-wrapper">
+                  <i class="fas fa-cloud skills-card-icon"></i>
+                </div>
+
+                <div>
+                  <h3>INFRASTRUCTURE</h3>
+                  <p>
+                    Deploying and managing applications with modern cloud and
+                    DevOps tools.
+                  </p>
+                </div>
               </div>
-              <div class="stack-title">BACK END</div>
-              <div>
-                I have 3+ years of experience working with
-                <span class="highlight">Ruby on Rails</span>. I can confidently
-                build <span class="highlight">RESTful APIs</span> and
-                <span class="highlight">GraphQL</span> queries. I also have
-                experience automating deployment of iOS and Android apps to
-                <span class="highlight">App Store</span>
-                and
-                <span class="highlight">Play Store</span>, as well as providing
-                hotfixes through <span class="highlight">Github Actions</span>.
+
+              <!-- <div class="skill-card-divider"></div> -->
+
+              <ul class="skill-tags">
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>GitHub Actions</li>
+                <li>Linux</li>
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Testing -->
+          <div class="col-md-6">
+            <div class="skill-card">
+              <div class="skill-card-header">
+                <div class="skill-icon-wrapper">
+                  <i class="fas fa-check-square skills-card-icon"></i>
+                </div>
+
+                <div>
+                  <h3>TESTING</h3>
+                  <p>
+                    Ensuring code quality through automated testing and reliable
+                    tooling.
+                  </p>
+                </div>
               </div>
+
+              <!-- <div class="skill-card-divider"></div> -->
+
+              <ul class="skill-tags">
+                <li>Jest</li>
+                <li>React Testing Library</li>
+                <li>Playwright</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- end skills -->
 
     <div id="portfolio" class="section">
       <div class="container">
@@ -836,7 +871,7 @@
 
     <div class="copyrightSection">
       <div class="col-md-12 text-center">
-        <p>&copy; Copyright Kevin Y. Kim 2024</p>
+        <p>&copy; Copyright Kevin Y. Kim 2026</p>
       </div>
       <ul>
         <li>
