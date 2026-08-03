@@ -672,7 +672,9 @@ a.highlight {
 ----------------- */
 
 .subHeading {
-  font-size: 16px;
+  font-size: 14px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
 }
 
 #contact {
@@ -687,16 +689,22 @@ a.highlight {
   background-size: cover;
 }
 
+#contact .col-md-12 {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
 #contact h2 {
-  margin-bottom: 25px;
-  margin-top: 15px;
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 #contact p {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 0.5rem;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 #contact .emailSub {
@@ -704,15 +712,42 @@ a.highlight {
   font-size: 13px;
 }
 
-#contact a {
-  color: #ffd700;
+.emailAddress {
+  display: inline-block;
+  margin-top: 15px;
+  background: white;
+  color: #c0392b;
+  border-radius: 999px;
   text-decoration: none;
+  padding: 14px 32px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
-#contact a:hover {
-  color: #000000;
-  cursor: pointer;
-  text-decoration: none;
+.emailAddress:hover {
+  background: #ffe9e7;
+  color: #991717;
+  transform: translateY(-2px);
+}
+
+.emailSub {
+  margin-top: 42px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.subHeading,
+.emailSub {
+  color: rgba(255, 255, 255, 0.92);
+  opacity: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#contact p:last-of-type {
+  margin-bottom: 0;
 }
 
 /* ---------------------
