@@ -228,6 +228,18 @@ button:focus-visible,
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
+/* pins the page while the fancybox lightbox is open — paired with the scroll
+   lock in script.js, which also sets `top` inline to the scroll offset it
+   froze at. `position: fixed` rather than `overflow: hidden` because iOS
+   Safari ignores the latter for touch scrolling. */
+body.fb-lock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 /* script.js injects both of these around the nav. the sentinel is what the
    IntersectionObserver watches — a real 1px box, pulled back out of the
    layout by the negative margin, whose size never changes. */

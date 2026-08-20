@@ -38,6 +38,8 @@ Per-slide rules that are easy to get wrong:
 - New `<img>` tags need `loading="lazy" class="img-fluid rounded mb-3 mb-md-0"` to match the others.
 - **Never hand-write carousel dots or arrows** — Owl generates them from `dots: true`.
 
+The fancybox init in `script.js` carries two deliberate departures from the defaults: `idleTime: false`, because the default hides the close button after 3s of no interaction, and an `onInit`/`afterClose` pair that pins `<body>` via the `fb-lock` class in `style.css`. That class is applied only from JS and appears nowhere in `index.html` — deleting it as an unused rule silently lets the page scroll behind the open lightbox.
+
 ## Nav
 
 Adding a nav link requires both a `<li>` in `<ul class="navbar-nav">` and a matching `id` on a `.section` div. The smooth-scroll handler in `script.js` resolves the `href` straight to an element and throws if the target is missing. `script.js` also reads `$(".skillsSection").offset()`, so removing that class breaks everything after it in the ready handler.

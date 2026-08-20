@@ -9,9 +9,42 @@ $(document).ready(function () {
 
   var skillsTopOffset = $(".skillsSection").offset().top;
 
+  // fancybox only stops the page behind it with `overflow: hidden` on <body>,
+  // which iOS Safari ignores for touch scrolling. Pinning the body is the one
+  // thing that holds there. It also keeps the address bar from collapsing
+  // while the lightbox is open, which was sliding the fixed overlay — and the
+  // close button in its top corner — up out of view.
+  let lockedAt = 0;
+
+  function lockScroll() {
+    if (document.body.classList.contains("fb-lock")) return; // fires per slide
+    lockedAt = window.pageYOffset;
+    // the scrollbar goes away with the lock; hold its width so the page behind
+    // does not reflow underneath the overlay
+    const gutter = window.innerWidth - document.documentElement.clientWidth;
+    if (gutter > 0) {
+      document.body.style.paddingRight = gutter + "px";
+    }
+    document.body.style.top = -lockedAt + "px";
+    document.body.classList.add("fb-lock");
+  }
+
+  function unlockScroll() {
+    if (!document.body.classList.contains("fb-lock")) return;
+    document.body.classList.remove("fb-lock");
+    document.body.style.top = "";
+    document.body.style.paddingRight = "";
+    window.scrollTo(0, lockedAt);
+  }
+
   $("[data-fancybox]").fancybox({
     transitionIn: "fade",
     transitionOut: "fade",
+    // the default hides the toolbar after 3s of no interaction. on a phone
+    // that means the close button disappears while you are looking at a shot.
+    idleTime: false,
+    onInit: lockScroll,
+    afterClose: unlockScroll,
   });
 
   const nav = document.getElementById("navigation");
