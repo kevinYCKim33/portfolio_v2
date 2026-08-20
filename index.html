@@ -19,11 +19,11 @@
     <title>Kevin Y. Kim - Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="title" property="og:title" content="Kevin Y. Kim Portfolio" />
-    <meta name="image" property="og:image" content="img/nyc_sunrise.webp" />
+    <meta name="image" property="og:image" content="img/nyc_v2_1254.webp" />
     <meta
       name="description"
       property="og:description"
-      content="I am a software engineer currently working as a front end engineer at Single Stop. As a programmer, I find myself completely absorbed in the work whether it be creating apps from scratch (like a Minecraft session) or diving into a codebase (like a Myst session)."
+      content="Software engineer in New York with seven years building consumer products — sportsbooks, streaming, and benefits platforms — across web, iOS, and Android."
     />
     <meta name="author" content="Kevin Y. Kim" />
     <meta property="og:type" content="website" />
@@ -36,6 +36,15 @@
     />
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CLibre+Baskerville%7CMontserrat%7CLobster" rel="stylesheet"> -->
     <link media="screen" href="css/fonts.google.css" rel="stylesheet" />
+
+    <!-- The vendored fonts.google.css only ships weight 400, so every bold
+         on the page was faux-bold. These carry real weights. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"> -->
     <link media="screen" rel="stylesheet" href="css/fontawesome.uncss.css" />
@@ -65,10 +74,18 @@
 
       <div class="titleMessage">
         <div class="heading">
-          <p class="main">Kevin Y. Kim</p>
-          <p class="sub typed">Software Engineer</p>
+          <p class="hero-eyebrow hero-rise">
+            Software Engineer &middot; New York
+          </p>
+          <p class="main hero-rise">Kevin Y. Kim</p>
+          <p class="sub hero-rise">
+            Seven years building consumer products — sportsbooks, streaming,
+            benefits platforms — that hold up under real traffic.
+          </p>
         </div>
       </div>
+
+      <span class="hero-cue">Scroll</span>
     </div>
     <!--slides -->
 
@@ -155,8 +172,13 @@
     <!-- skills -->
     <div id="skills" class="skillsSection section">
       <div class="container">
-        <div class="col-md-12 text-center mb-4">
-          <h2>TECHNICAL SKILLS</h2>
+        <div class="section-head">
+          <p class="eyebrow">Capabilities</p>
+          <h2>What I work with</h2>
+          <p class="section-lede">
+            The stack I reach for across web, mobile, and the services behind
+            them.
+          </p>
         </div>
 
         <div class="row skills-grid">
@@ -283,11 +305,12 @@
     <div id="portfolio" class="section">
       <div class="container">
         <div class="row">
-          <div class="heading">
-            <h2>WORK EXPERIENCE</h2>
+          <div class="section-head">
+            <p class="eyebrow">Selected work</p>
+            <h2>Where I've shipped</h2>
             <div class="addl-info">
               <span class="addl-info__desc"
-                >Click on a slide to see its detailed descriptions</span
+                >Select a screenshot to read what it shows</span
               >
             </div>
           </div>
@@ -854,7 +877,7 @@
                   href="img/custom_playlist_3.webp"
                   title="Mixes and Custom Playlist Pages"
                   data-fancybox="beat45"
-                  data-caption="Custom Playlist Creator: Through a combination of Websockets and Redux, adding a mix to a custom playlist in one window automatically popuplates the custom playlist window with the added mix without needing a page refresh.  Using React's react-beautiful-dnd, the mixes are reorderable via drag and drop."
+                  data-caption="Custom Playlist Creator: Through a combination of Websockets and Redux, adding a mix to a custom playlist in one window automatically populates the custom playlist window with the added mix without needing a page refresh.  Using React's react-beautiful-dnd, the mixes are reorderable via drag and drop."
                 >
                   <img
                     loading="lazy"
