@@ -17,6 +17,8 @@ Only these two files are hand-written. Everything else in `css/` and `js/` is ve
 - `css/style.css` — all authored CSS. Loaded **last** in `<head>`, which is what lets it override Bootstrap. Keep it last.
 - `js/script.js` — all authored JS (Owl Carousel init, fancybox init, smooth scroll, sticky nav).
 
+**Never re-add a `jQuery.event.special.touchstart` override that marks listeners `passive`.** One lived at the top of `script.js` until it was removed; it silenced Chrome's non-passive-listener console warning, but a passive listener makes `preventDefault()` a no-op, and both touchstart consumers on this page — Owl Carousel's drag and fancybox's arrow buttons — depend on it. In the lightbox that meant a tap ran `next()` on `touchstart` and then again on the click the browser synthesized because the `preventDefault()` was ignored, so every tap skipped two slides on mobile.
+
 `css/bootstrap.css` is minified vendor Bootstrap 4.0.0 despite the plain `.css` name. Style changes go in `style.css` as overrides, never by editing vendor files.
 
 **Fonts come from two places.** `css/fonts.google.css` is vendored but ships **weight 400 only** — anything bold set in those families renders as faux-bold. The real type system (Archivo / Newsreader / JetBrains Mono, with actual weights) loads from the Google Fonts CDN link in `<head>`; `style.css` references them through `--font-display`, `--font-body`, and `--font-mono`. Use those variables rather than naming families directly.

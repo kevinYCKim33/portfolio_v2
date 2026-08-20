@@ -1,11 +1,3 @@
-jQuery.event.special.touchstart = {
-  setup: function (_, ns, handle) {
-    this.addEventListener("touchstart", handle, {
-      passive: !ns.includes("noPreventDefault"),
-    });
-  },
-};
-
 $(document).ready(function () {
   // https://owlcarousel2.github.io/OwlCarousel2/demos/basic.html
   $(".owl-carousel").owlCarousel({
