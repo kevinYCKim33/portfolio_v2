@@ -228,6 +228,24 @@ button:focus-visible,
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
+/* script.js injects both of these around the nav. the sentinel is what the
+   IntersectionObserver watches — a real 1px box, pulled back out of the
+   layout by the negative margin, whose size never changes. */
+.nav-sentinel {
+  height: 1px;
+  margin-bottom: -1px;
+}
+
+/* the spacer inherits the nav's height while the nav is fixed, so the
+   sections below it stay put instead of jumping up by a navbar */
+.nav-spacer {
+  height: 0;
+}
+
+.fixedNav .nav-spacer {
+  height: var(--nav-h, 60px);
+}
+
 /* -------------
        HERO
 ---------------- */

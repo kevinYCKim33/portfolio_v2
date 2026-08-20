@@ -22,12 +22,30 @@ $(document).ready(function () {
     transitionOut: "fade",
   });
 
+  const nav = document.getElementById("navigation");
+  const navCollapse = $("#navbarNav");
+
   // code that scrolls down to the clicked link instead of jumping to it
   $("#navigation li a").click(function (e) {
     e.preventDefault();
     var targetElement = $(this).attr("href");
-    var targetPosition = $(targetElement).offset().top;
-    $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
+
+    function scrollToTarget() {
+      // clear the sticky bar rather than the flat 50px this used to assume —
+      // the bar is 69px on mobile, so headings landed underneath it
+      var targetPosition =
+        $(targetElement).offset().top - nav.offsetHeight - 12;
+      $("html, body").animate({ scrollTop: targetPosition }, "slow");
+    }
+
+    // on mobile the open menu is part of the page flow until the bar sticks,
+    // so every section below it sits lower than it will once the menu closes.
+    // measuring before the collapse finishes lands the scroll short.
+    if (navCollapse.hasClass("show")) {
+      navCollapse.one("hidden.bs.collapse", scrollToTarget).collapse("hide");
+    } else {
+      scrollToTarget();
+    }
   });
 
   // reveal sections on first scroll into view
@@ -57,19 +75,64 @@ $(document).ready(function () {
     });
   }
 
-  const nav = $("#navigation");
-  const navTop = nav.offset().top; //moment at which to add or remove the sticky class;
-  $(window).on("scroll", stickyNavigation);
+  // sticky nav.
+  //
+  // This used to cache the nav's document offset once at ready and compare
+  // scrollTop against it on every scroll event. Two things made that cached
+  // number wrong: `.splash` is 100vh, so on mobile the hero grows and shrinks
+  // every time the browser hides or reveals its address bar, and the
+  // carousels lazy-load their images long after ready. Either one moves the
+  // nav without updating the trigger point, which is what made the bar drop
+  // in and out while scrolling. A sentinel sitting where the nav lives in the
+  // flow is read live, so it cannot go stale.
+  // two injected divs, deliberately separate. the sentinel is the trigger and
+  // never changes size, so the observer keeps getting clean crossings at the
+  // top of the viewport. the spacer sits after the nav and takes over its
+  // height, so nothing below jumps when the nav leaves the flow. doing both
+  // jobs with one element (or with padding on <body>, as this used to) moves
+  // the trigger point as a side effect of tripping it, which oscillates.
+  const sentinel = document.createElement("div");
+  sentinel.className = "nav-sentinel";
+  nav.parentNode.insertBefore(sentinel, nav);
 
-  function stickyNavigation() {
-    var body = $("body");
+  const spacer = document.createElement("div");
+  spacer.className = "nav-spacer";
+  nav.parentNode.insertBefore(spacer, nav.nextSibling);
 
-    if ($(window).scrollTop() >= navTop) {
-      body.css("padding-top", nav.outerHeight() - 10 + "px"); //fix for content jumping on scroll lock trigger
-      body.addClass("fixedNav");
-    } else {
-      body.css("padding-top", 0);
-      body.removeClass("fixedNav");
-    }
+  function measureNav() {
+    if (navCollapse.hasClass("show")) return; // open menu is not the resting height
+    document.documentElement.style.setProperty(
+      "--nav-h",
+      nav.offsetHeight + "px",
+    );
+  }
+
+  function setStuck(isStuck) {
+    document.body.classList.toggle("fixedNav", isStuck);
+  }
+
+  measureNav();
+  // webfonts and the hero image both settle after ready and can change the
+  // bar's height
+  $(window).on("load resize orientationchange", measureNav);
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(
+      function (entries) {
+        // stick once the sentinel has passed above the top of the viewport
+        setStuck(entries[0].boundingClientRect.top < 0);
+      },
+      { threshold: 0 },
+    ).observe(sentinel);
+  } else {
+    let ticking = false;
+    $(window).on("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        setStuck(sentinel.getBoundingClientRect().top < 0);
+        ticking = false;
+      });
+    });
   }
 });

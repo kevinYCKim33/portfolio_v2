@@ -21,7 +21,7 @@ Only these two files are hand-written. Everything else in `css/` and `js/` is ve
 
 **Fonts come from two places.** `css/fonts.google.css` is vendored but ships **weight 400 only** — anything bold set in those families renders as faux-bold. The real type system (Archivo / Newsreader / JetBrains Mono, with actual weights) loads from the Google Fonts CDN link in `<head>`; `style.css` references them through `--font-display`, `--font-body`, and `--font-mono`. Use those variables rather than naming families directly.
 
-**`css/fontawesome.uncss.css` is a UnCSS-pruned subset** containing only the ~16 icon classes currently used. Adding a new `<i class="fas fa-xyz">` to the HTML renders *nothing* — the rule was stripped out. Either reuse an existing icon or re-enable the full Font Awesome CDN link (commented out near the top of `index.html`).
+**`css/fontawesome.uncss.css` is a UnCSS-pruned subset** containing only the ~16 icon classes currently used. Adding a new `<i class="fas fa-xyz">` to the HTML renders _nothing_ — the rule was stripped out. Either reuse an existing icon or re-enable the full Font Awesome CDN link (commented out near the top of `index.html`).
 
 ## Portfolio slide markup
 
@@ -39,6 +39,8 @@ Per-slide rules that are easy to get wrong:
 ## Nav
 
 Adding a nav link requires both a `<li>` in `<ul class="navbar-nav">` and a matching `id` on a `.section` div. The smooth-scroll handler in `script.js` resolves the `href` straight to an element and throws if the target is missing. `script.js` also reads `$(".skillsSection").offset()`, so removing that class breaks everything after it in the ready handler.
+
+**The sticky bar depends on two divs that only exist at runtime.** `script.js` injects `.nav-sentinel` before the nav and `.nav-spacer` after it; both are styled in `style.css` but appear nowhere in `index.html`, so they look like dead rules — they are not. The sentinel is what the IntersectionObserver watches and its size must never change, or the observer stops getting crossings and the bar will not un-stick. The spacer is what holds the nav's height open while it is fixed. Never merge the two jobs into one element, and never compensate with padding on `<body>` — anything that moves the trigger point as a side effect of tripping it oscillates. Don't trust a cached document offset here either: `.splash` is `100vh`, so the hero resizes whenever a mobile browser hides its address bar.
 
 ## Formatting
 
