@@ -30,6 +30,33 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
   });
 
+  // reveal sections on first scroll into view
+  if ("IntersectionObserver" in window) {
+    const revealTargets = document.querySelectorAll(
+      "#about .about-container, .section-head, .skills-grid > div, #portfolio .row:not(:first-of-type), #contact .col-md-12",
+    );
+
+    revealTargets.forEach(function (el) {
+      el.classList.add("reveal");
+    });
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -12% 0px" },
+    );
+
+    revealTargets.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
   const nav = $("#navigation");
   const navTop = nav.offset().top; //moment at which to add or remove the sticky class;
   $(window).on("scroll", stickyNavigation);

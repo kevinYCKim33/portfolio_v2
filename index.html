@@ -19,15 +19,15 @@
     <title>Kevin Y. Kim - Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="title" property="og:title" content="Kevin Y. Kim Portfolio" />
-    <meta name="image" property="og:image" content="img/nyc_sunrise.webp" />
+    <meta name="image" property="og:image" content="img/nyc_v2_1254.webp" />
     <meta
       name="description"
       property="og:description"
-      content="I am a software engineer currently working as a front end engineer at Single Stop. As a programmer, I find myself completely absorbed in the work whether it be creating apps from scratch (like a Minecraft session) or diving into a codebase (like a Myst session)."
+      content="Software engineer in New York with seven years building consumer products — sportsbooks, streaming, and benefits platforms — across web, iOS, and Android."
     />
     <meta name="author" content="Kevin Y. Kim" />
     <meta property="og:type" content="website" />
-    <link media="screen" rel="shortcut icon" href="favicon/favicon.ico" />
+    <link media="screen" rel="shortcut icon" href="favicon/favicon-v2.ico" />
     <link media="screen" rel="stylesheet" href="css/owl.carousel.min.css" />
     <link
       media="screen"
@@ -36,6 +36,15 @@
     />
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CLibre+Baskerville%7CMontserrat%7CLobster" rel="stylesheet"> -->
     <link media="screen" href="css/fonts.google.css" rel="stylesheet" />
+
+    <!-- The vendored fonts.google.css only ships weight 400, so every bold
+         on the page was faux-bold. These carry real weights. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"> -->
     <link media="screen" rel="stylesheet" href="css/fontawesome.uncss.css" />
@@ -65,10 +74,18 @@
 
       <div class="titleMessage">
         <div class="heading">
-          <p class="main">Kevin Y. Kim</p>
-          <p class="sub typed">Software Engineer</p>
+          <p class="hero-eyebrow hero-rise">
+            Software Engineer &middot; New York
+          </p>
+          <p class="main hero-rise">Kevin Y. Kim</p>
+          <p class="sub hero-rise">
+            Building software that turns complex systems into simple, intuitive
+            experiences.
+          </p>
         </div>
       </div>
+
+      <span class="hero-cue">Scroll</span>
     </div>
     <!--slides -->
 
@@ -96,7 +113,7 @@
             <a class="nav-link" href="#skills">SKILLS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio">WORK EXPERIENCE</a>
+            <a class="nav-link" href="#portfolio">SELECTED WORK</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">CONTACT</a>
@@ -122,23 +139,23 @@
           <h4>Who am I?</h4>
 
           <p>
-            Hello, I'm Kevin—a software engineer with 7+ years of experience
-            building web and mobile applications used by thousands of customers.
+            Hello, I'm Kevin—a software engineer with 8 years of experience
+            building web and mobile products across a range of industries.
           </p>
 
           <p>
-            Throughout my career, I've developed software across industries
-            including sportsbook, education technology, music streaming, fine
-            arts, and nonprofit organizations. I enjoy building products from
-            end to end, whether that means creating intuitive user interfaces,
-            designing scalable backend services, or collaborating across teams
-            to bring new features to life.
+            My experience spans sportsbooks, education technology, music
+            streaming, fine arts, and nonprofit organizations. What I enjoy most
+            is solving problems across the stack—whether I’m refining a user
+            experience, building out backend functionality, or working with a
+            team to take an idea all the way to production.
           </p>
 
           <p>
             My primary technologies include TypeScript, React, Next.js, Java,
-            Spring Boot, Node.js, and PostgreSQL, and I'm passionate about
-            writing clean, maintainable code that solves real problems.
+            Spring Boot, Node.js, Ruby on Rails, and PostgreSQL, and I'm
+            passionate about writing clean, maintainable code that solves real
+            problems.
           </p>
 
           <a
@@ -155,8 +172,13 @@
     <!-- skills -->
     <div id="skills" class="skillsSection section">
       <div class="container">
-        <div class="col-md-12 text-center mb-4">
-          <h2>TECHNICAL SKILLS</h2>
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2>What I work with</h2>
+          <p class="section-lede">
+            The stack I reach for across web, mobile, and the services behind
+            them.
+          </p>
         </div>
 
         <div class="row skills-grid">
@@ -283,13 +305,9 @@
     <div id="portfolio" class="section">
       <div class="container">
         <div class="row">
-          <div class="heading">
-            <h2>WORK EXPERIENCE</h2>
-            <div class="addl-info">
-              <span class="addl-info__desc"
-                >Click on a slide to see its detailed descriptions</span
-              >
-            </div>
+          <div class="section-head">
+            <p class="eyebrow">Selected work</p>
+            <h2>Where I've shipped</h2>
           </div>
         </div>
 
@@ -415,8 +433,8 @@
               GeoComply, Product, and UI/UX teams to deliver a seamless single
               sign-on experience, shared wallet, and geolocation verification.
               The integration eliminated customer onboarding friction between
-              products and supported a platform that achieved
-              <b>45% year-over-year revenue growth.</b>
+              products and supported a platform that achieved 45% year-over-year
+              revenue growth.
             </p>
 
             <p>
@@ -854,7 +872,7 @@
                   href="img/custom_playlist_3.webp"
                   title="Mixes and Custom Playlist Pages"
                   data-fancybox="beat45"
-                  data-caption="Custom Playlist Creator: Through a combination of Websockets and Redux, adding a mix to a custom playlist in one window automatically popuplates the custom playlist window with the added mix without needing a page refresh.  Using React's react-beautiful-dnd, the mixes are reorderable via drag and drop."
+                  data-caption="Custom Playlist Creator: Through a combination of Websockets and Redux, adding a mix to a custom playlist in one window automatically populates the custom playlist window with the added mix without needing a page refresh.  Using React's react-beautiful-dnd, the mixes are reorderable via drag and drop."
                 >
                   <img
                     loading="lazy"
